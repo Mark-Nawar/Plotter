@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <title>
+      Plotting functions in JavaScript using the function plot library
+    </title>
+    <meta charset="utf-8" />
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="../src/myscript.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="plot();">
+    <h1>Functions' Plotter</h1>
+    
+
+    <div class="container">
+      <div id="contact">
+        <h3>Graph Input Data</h3>
+        <h4>All Fields Are required!</h4>
+        <label for="xMin">Min X value </label>
+          <input
+            placeholder="Min X"
+            type="number"
+            id="xMin"
+            value="-5"
+            step="0.5" 
+            oninput="plot();"
+          />
+          <p></p>
+          <label for="xMax">Max X value</label>
+          <input
+            placeholder="Max X"
+            type="number"
+            id="xMax"
+            value="6.28"
+            step="0.5" 
+            oninput="plot();"
+          />
+          <p></p>
+
+          <label for="yMax">Max Y value </label>
+          <input
+          placeholder="Max Y"
+          type="number"
+          id="yMax"
+          value="6"
+          step="0.5" 
+          oninput="plot();"
+          />
+          <p></p>
+
+          <label for="yMin">Min Y value </label>
+          <input
+          placeholder="Min Y"
+          type="number"
+          id="yMIn"
+          step="0.5" 
+          value="-6"
+          oninput="plot();"
+          />
+          <p></p>
+
+          <label for="color"> line color </label>
+            <input
+            type="color"
+            id="color"
+            value="#FFFFFF"
+            onchange="plot();"
+            />
+            <p></p>
+
+          <label for="function"> line equation </label>
+            <input
+            placeholder="Enter the equation"
+            type="text"
+            id="function"
+            value="cos(x)"
+            onchange="plot();"
+            tabindex="6"
+            />
+            <p></p>
+          <button
+            onclick="plot();"
+          >
+            Plot Graph
+          </button>
+    </div>
+    </div>
+
+    <div id="plot">
+        <div id="myFunction"></div>
+      </div>
+    <div  style="text-align: center; margin: auto; padding-top: 30px;"><span>Made By : Mark Nawar CCE2023</span> </div>
+  </body>
+</html>
